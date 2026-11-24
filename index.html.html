@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Abinesh R | Python Full Stack Developer</title>
+<meta name="description" content="Abinesh R is a Python Full Stack Developer building modern, responsive websites and web applications at affordable prices.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#05030f;--bg2:#0b0a1e;--tx:#e9e7f7;--mu:#9a98b8;--ac:#8b5cf6;--ac2:#22d3ee;--gl:rgba(255,255,255,.05);--bd:rgba(255,255,255,.1);color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 16px/1.65 Inter,system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:Sora,Inter,sans-serif;line-height:1.15;margin:0}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--ac2);outline-offset:3px}
+.wrap{max-width:1120px;margin:auto;padding:0 22px}
+section{padding:88px 0}
+.stars{position:fixed;inset:0;z-index:-1;background:radial-gradient(1px 1px at 20% 30%,#fff8,transparent),radial-gradient(1px 1px at 70% 20%,#fff6,transparent),radial-gradient(1.5px 1.5px at 85% 70%,#fff7,transparent),radial-gradient(1px 1px at 40% 80%,#fff6,transparent),radial-gradient(1px 1px at 10% 65%,#fff5,transparent);background-size:420px 420px,380px 380px,500px 500px,350px 350px,300px 300px}
+.stars::after{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--gl) 1px,transparent 1px),linear-gradient(90deg,var(--gl) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse at 60% 30%,#000,transparent 70%);-webkit-mask-image:radial-gradient(ellipse at 60% 30%,#000,transparent 70%);opacity:.5}
+/* nav */
+header{position:fixed;top:0;left:0;right:0;z-index:50;padding-top:env(safe-area-inset-top,0px)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font:800 1.45rem Sora;letter-spacing:.02em}.logo b{color:var(--ac2)}
+nav ul{display:flex;gap:6px;list-style:none;margin:0;padding:6px;background:rgba(15,12,40,.6);border:1px solid var(--bd);border-radius:99px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+nav a{display:block;padding:7px 16px;border-radius:99px;font-size:.9rem;color:var(--mu);transition:.2s}
+nav a:hover{color:#fff;background:var(--gl)}
+.btn{display:inline-block;padding:12px 24px;border-radius:12px;font-weight:600;border:1px solid var(--bd);background:var(--gl);cursor:pointer;color:var(--tx);font:600 .95rem Inter;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px)}
+.pri{background:linear-gradient(135deg,#7c3aed,#4f46e5);border-color:#a78bfa66;box-shadow:0 0 28px #7c3aed66}
+.pri:hover{box-shadow:0 0 40px #8b5cf6aa}
+.burger{display:none;background:none;border:1px solid var(--bd);color:#fff;border-radius:10px;width:42px;height:42px;font-size:1.2rem;cursor:pointer}
+/* hero */
+.hero{min-height:100vh;padding:130px 0 70px;position:relative;display:flex;align-items:center}
+.hole{position:absolute;top:-170px;left:50%;width:min(720px,120vw);height:340px;transform:translateX(-50%);border-radius:50%;background:radial-gradient(closest-side,#05030f 55%,#a78bfa 62%,#6d28d9 72%,transparent 100%);filter:blur(10px);opacity:.9;z-index:-1}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center;width:100%}
+.badge{display:inline-flex;gap:8px;align-items:center;padding:7px 14px;border:1px solid var(--bd);background:var(--gl);border-radius:99px;font-size:.82rem;color:var(--mu);margin-bottom:22px}
+.dot{width:8px;height:8px;border-radius:50%;background:#34d399;box-shadow:0 0 10px #34d399}
+h1{font-size:clamp(2.3rem,5.4vw,4rem);font-weight:800;letter-spacing:-.02em}
+.grad{background:linear-gradient(90deg,#a78bfa,#22d3ee);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--mu);max-width:480px;margin:20px 0 30px;font-size:1.05rem}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.orbit-box{position:relative;height:460px;display:grid;place-items:center}
+.ring{position:absolute;width:380px;height:380px;border:1px solid var(--bd);border-radius:50%}
+.ring.r2{width:250px;height:250px}
+.core{width:96px;height:96px;border-radius:26px;display:grid;place-items:center;font:800 1.5rem Sora;background:linear-gradient(135deg,#7c3aed55,#22d3ee33);border:1px solid #a78bfa66;box-shadow:0 0 60px #7c3aed77}
+.orbit{position:absolute;inset:0;animation:spin 48s linear infinite}
+.node{position:absolute;left:50%;top:50%;width:0;height:0;transform:rotate(var(--a)) translateX(190px) rotate(calc(-1*var(--a)))}
+.node span{position:absolute;left:-34px;top:-34px;width:68px;height:68px;display:grid;place-items:center;border-radius:18px;background:rgba(20,16,50,.75);border:1px solid var(--bd);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);font:700 .78rem Sora;text-align:center;animation:spin 48s linear infinite reverse;box-shadow:0 0 24px #6d28d933}
+@keyframes spin{to{transform:rotate(360deg)}}
+/* shared */
+.hd{max-width:640px;margin-bottom:44px}
+.hd h2{font-size:clamp(1.8rem,3.6vw,2.7rem);font-weight:800;margin-bottom:14px}
+.hd p{color:var(--mu);margin:0}
+.glass{background:var(--gl);border:1px solid var(--bd);border-radius:20px;padding:26px;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.grid{display:grid;gap:20px}
+.g4{grid-template-columns:repeat(4,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}
+.lift{transition:transform .25s,border-color .25s,box-shadow .25s}
+.lift:hover{transform:translateY(-5px);border-color:#a78bfa88;box-shadow:0 12px 40px #6d28d933}
+ul.tick{list-style:none;padding:0;margin:14px 0 22px;color:var(--mu);font-size:.93rem}
+ul.tick li{padding-left:24px;position:relative;margin:7px 0}
+ul.tick li::before{content:"✓";position:absolute;left:0;color:var(--ac2);font-weight:700}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{padding:5px 12px;border-radius:99px;font-size:.8rem;border:1px solid var(--bd);background:var(--gl);color:var(--tx)}
+/* about */
+.about{display:grid;grid-template-columns:1.3fr 1fr;gap:28px}
+.about p{color:var(--mu);margin:0 0 16px}
+.edu h3{font-size:1.05rem;margin-bottom:6px}.edu small{color:var(--mu);display:block}
+.edu hr{border:0;border-top:1px solid var(--bd);margin:18px 0}
+/* skills */
+.sk h3{font-size:1.05rem;margin-bottom:16px;color:var(--ac2)}
+.sk .tag{display:inline-block;transition:.2s}.sk .tag:hover{background:#7c3aed44;transform:scale(1.06)}
+/* pricing */
+.price{position:relative;display:flex;flex-direction:column}
+.price .btn{margin-top:auto;text-align:center}
+.price.rec{border-color:#a78bfa;box-shadow:0 0 50px #7c3aed44}
+.rec-t{position:absolute;top:-13px;left:50%;transform:translateX(-50%);padding:4px 14px;border-radius:99px;background:linear-gradient(90deg,#7c3aed,#06b6d4);font-size:.78rem;font-weight:600;white-space:nowrap}
+.cp{font:700 1.2rem Sora;margin:6px 0 0}
+.card h3{font-size:1.2rem;margin-bottom:6px}
+.card{display:flex;flex-direction:column}.card .btn{margin-top:auto;align-self:flex-start}
+.card>p{color:var(--mu);margin:8px 0 14px}
+.sm{margin-top:18px;font-size:.88rem;color:var(--mu)}
+/* why */
+.why{display:flex;gap:14px;align-items:flex-start}
+.why i{flex:none;width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,#7c3aed66,#06b6d444);font-style:normal}
+.why h3{font-size:1rem;margin-bottom:4px}.why p{margin:0;color:var(--mu);font-size:.9rem}
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+label{display:block;font-size:.85rem;color:var(--mu);margin:0 0 6px}
+input,textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--bd);background:#0d0b24;color:var(--tx);font:inherit;margin-bottom:4px}
+textarea{min-height:120px;resize:vertical}
+input:focus,textarea:focus{outline:2px solid var(--ac);border-color:transparent}
+.er{display:block;min-height:18px;font-size:.78rem;color:#fb7185;margin-bottom:8px}
+.ok{color:#34d399;margin-top:14px;font-size:.92rem}
+.ci a{display:block;padding:13px 0;border-bottom:1px solid var(--bd);color:var(--tx)}
+.ci a span{display:block;font-size:.8rem;color:var(--mu)}
+.ci .btn{padding:13px 22px;margin:22px 12px 0 0;border-bottom:1px solid var(--bd)}
+footer{border-top:1px solid var(--bd);padding:36px 0 44px;text-align:center;color:var(--mu);font-size:.9rem}
+footer .soc{display:flex;gap:18px;justify-content:center;margin:14px 0}
+footer .soc a:hover{color:var(--ac2)}
+@media(max-width:900px){.g4,.g3{grid-template-columns:1fr 1fr}.hero .wrap,.about,.contact{grid-template-columns:1fr}.orbit-box{height:400px;transform:scale(.85)}}
+@media(max-width:700px){nav{display:none;position:absolute;top:68px;left:16px;right:16px}nav.open{display:block}nav ul{flex-direction:column;border-radius:20px;background:#0b0a1ef2}.burger{display:block}.hd{margin-bottom:30px}.g4,.g3,.g2{grid-template-columns:1fr}section{padding:64px 0}.top-cta{display:none}.orbit-box{height:360px;transform:scale(.72);margin:-20px 0}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="stars"></div>
+<header><div class="wrap bar">
+<a href="#home" class="logo">ABINESH</a>
+<nav id="nav" aria-label="Main"><ul>
+<li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#services">Services</a></li><li><a href="#projects">Projects</a></li><li><a href="#contact">Contact</a></li></ul></nav>
+<a href="#contact" class="btn pri top-cta">Let’s Talk</a>
+<button class="burger" id="bg" aria-label="Open menu" aria-expanded="false">☰</button>
+</div></header>
+
+<main>
+<section class="hero" id="home"><div class="hole"></div><div class="wrap">
+<div>
+<div class="badge"><span class="dot"></span>Available for Freelance Projects</div>
+<h1>Turning Ideas Into <span class="grad">Powerful</span> Digital Experiences.</h1>
+<p>I’m Abinesh R, a Python Full Stack Developer building modern websites and web applications at affordable prices.</p>
+<div class="cta"><a href="#projects" class="btn pri">Explore My Work</a><a href="#contact" class="btn">Hire Me</a></div>
+</div>
+<div class="orbit-box" aria-hidden="true">
+<div class="ring"></div><div class="ring r2"></div>
+<div class="orbit" id="orbit"></div>
+<div class="core">&lt;/&gt;</div>
+</div>
+</div></section>
+
+<section id="about"><div class="wrap">
+<div class="hd"><h2>A Little About Me</h2></div>
+<div class="about">
+<div class="glass">
+<p>I’m a Computer Science and Engineering graduate with a strong interest in full-stack development and modern web technologies. I have experience working with Python, JavaScript, React, Django, FastAPI, and MySQL.</p>
+<p>I enjoy developing practical applications, exploring new technologies, and solving real-world problems through software development.</p>
+<p style="margin:0">Alongside my development journey, I provide affordable website development services to help businesses and individuals build their digital presence.</p>
+</div>
+<div class="glass edu">
+<h3>Bachelor of Engineering, Computer Science and Engineering</h3>
+<small>Thangavelu Engineering College</small><small>2022–2026</small><small>Percentage: 75.43%</small>
+<hr>
+<h3>Certification</h3>
+<small>Python Full Stack, QSpiders Software Training Institute, Chennai</small>
+</div></div></div></section>
+
+<section id="skills"><div class="wrap">
+<div class="hd"><h2>Technical Skills</h2><p>The tools I use to design, build, and ship websites.</p></div>
+<div class="grid g4" id="skillGrid"></div></div></section>
+
+<section id="services"><div class="wrap">
+<div class="hd"><h2>Professional Websites. Affordable Pricing.</h2><p>Need a website for your business, startup, or personal brand? I help turn your ideas into modern, responsive, and professional websites without expensive development costs.</p></div>
+<div class="grid g4" id="svcGrid"></div></div></section>
+
+<section id="pricing"><div class="wrap">
+<div class="hd"><h2>Affordable Website Packages</h2><p>Every project is different, so pricing is based on what you need.</p></div>
+<div class="grid g3" id="priceGrid" style="padding-top:12px"></div></div></section>
+
+<section id="projects"><div class="wrap">
+<div class="hd"><h2>Projects</h2><p>Academic projects that show how I work with data, APIs, and interfaces.</p></div>
+<div class="grid g2" id="projGrid"></div></div></section>
+
+<section id="why"><div class="wrap">
+<div class="hd"><h2>Why Work With Me?</h2></div>
+<div class="grid g3" id="whyGrid"></div></div></section>
+
+<section id="contact"><div class="wrap">
+<div class="hd"><h2>Have a Project in Mind? Let’s Build It Together.</h2></div>
+<div class="contact">
+<form class="glass" id="cf" novalidate>
+<label for="n">Name</label><input id="n" autocomplete="name"><span class="er" id="e-n"></span>
+<label for="e">Email</label><input id="e" type="email" autocomplete="email"><span class="er" id="e-e"></span>
+<label for="s">Subject</label><input id="s"><span class="er" id="e-s"></span>
+<label for="m">Message</label><textarea id="m"></textarea><span class="er" id="e-m"></span>
+<button class="btn pri" type="submit">Send Message</button>
+<div class="ok" id="ok" role="status"></div>
+</form>
+<div class="glass ci">
+<a href="mailto:abineshr491@gmail.com"><span>Email</span>abineshr491@gmail.com</a>
+<a href="tel:+919360416474"><span>Phone</span>9360416474</a>
+<a class="btn pri" href="https://wa.me/919360416474?text=Hi%20Abinesh%2C%20I%20need%20a%20website." target="_blank" rel="noopener">WhatsApp Me</a>
+<a class="btn pri" target="_blank" rel="noopener" href="https://www.linkedin.com/in/abinesh-r-425a45388">LinkedIn</a><a class="btn pri" target="_blank" rel="noopener" href="https://github.com/Abinesh2311">GitHub</a>
+</div></div></div></section>
+</main>
+
+<footer><div class="wrap">
+<div>Designed &amp; Developed by Abinesh R</div>
+<div>Building Digital Experiences at Affordable Prices.</div>
+<div class="soc"><a target="_blank" rel="noopener" href="https://www.linkedin.com/in/abinesh-r-425a45388">LinkedIn</a><a target="_blank" rel="noopener" href="https://github.com/Abinesh2311">GitHub</a><a href="https://wa.me/919360416474" target="_blank" rel="noopener">WhatsApp</a><a href="mailto:abineshr491@gmail.com">Email</a></div>
+<small>© <span id="yr"></span> Abinesh R. All rights reserved.</small>
+</div></footer>
+
+<script>
+var $=function(i){return document.getElementById(i)};
+var WA="https://wa.me/919360416474?text=";
+function wa(t){return WA+encodeURIComponent("Hi Abinesh, I’m interested in the "+t+".")}
+// orbit icons
+var ic=["Py","React","JS","Django","Fast API","SQL"];
+$("orbit").innerHTML=ic.map(function(t,i){return '<div class="node" style="--a:'+(i*60)+'deg"><span>'+t+'</span></div>'}).join("");
+// skills
+var skills={"Frontend":["HTML5","CSS3","JavaScript","React.js"],"Backend":["Python","Django","FastAPI"],"Database":["MySQL"],"Tools":["Git","GitHub","VS Code"]};
+$("skillGrid").innerHTML=Object.keys(skills).map(function(k){return '<div class="glass sk lift"><h3>'+k+'</h3><div class="tags">'+skills[k].map(function(s){return '<span class="tag">'+s+'</span>'}).join("")+'</div></div>'}).join("");
+// services
+var svc=[["Business Website",["Professional business websites","Company profile websites","Service and contact pages","Mobile-friendly design"]],["Portfolio Website",["Personal portfolios","Developer portfolios","Freelancer portfolios","Resume and personal branding websites"]],["Landing Page Development",["Product landing pages","Startup landing pages","Promotional websites","Lead generation pages"]],["Custom Web Applications",["Dynamic web applications","Database integration","Backend development","Custom functionality"]]];
+$("svcGrid").innerHTML=svc.map(function(s){return '<div class="glass card lift"><h3>'+s[0]+'</h3><ul class="tick">'+s[1].map(function(x){return '<li>'+x+'</li>'}).join("")+'</ul><a class="btn" href="#contact" data-sub="Quote request: '+s[0]+'">Get a Quote</a></div>'}).join("");
+// pricing
+var pk=[["Basic Package",["Single-page website","Responsive design","Contact information","Basic animations"]],["Standard Package",["Up to 5 pages","Modern UI design","Responsive layout","Contact form","Basic SEO setup"],1],["Premium Package",["Custom multi-page website","Frontend and backend integration","Database connectivity","Custom functionality","Advanced UI animations"]]];
+$("priceGrid").innerHTML=pk.map(function(p){return '<div class="glass price lift">'+'<h3>'+p[0]+'</h3><p class="cp">Contact for Pricing</p><ul class="tick">'+p[1].map(function(x){return '<li>'+x+'</li>'}).join("")+'</ul><a class="btn" target="_blank" rel="noopener" href="'+wa(p[0])+'">Enquire on WhatsApp</a></div>'}).join("");
+// projects
+var pj=[["Aqua Vision","An AI-powered ocean-monitoring application developed using FastAPI and React.",["Ocean temperature prediction using real-time data","Polynomial Ridge Regression","Marine risk detection","Interactive data visualizations","Cloud functionality integration"],["FastAPI","React","Python","Machine Learning"],""],["Sentiment Analysis on Social Media","A machine learning application designed to classify social media posts into positive, negative, and neutral sentiment categories.",["Sentiment classification","Logistic Regression","Naive Bayes","Accuracy evaluation","Confusion matrix","Precision and recall evaluation"],["Python","Machine Learning","Logistic Regression","Naive Bayes"],""]];
+// add real links here: github / demo
+var links={"Aqua Vision":{github:"",demo:""},"Sentiment Analysis on Social Media":{github:"",demo:""}};
+$("projGrid").innerHTML=pj.map(function(p){var l=links[p[0]],b="";if(l.github)b+='<a class="btn" target="_blank" rel="noopener" href="'+l.github+'">GitHub</a> ';if(l.demo)b+='<a class="btn pri" target="_blank" rel="noopener" href="'+l.demo+'">Live Demo</a>';return '<div class="glass card lift"><h3>'+p[0]+'</h3><p>'+p[1]+'</p><ul class="tick" style="margin-top:0">'+p[2].map(function(x){return '<li>'+x+'</li>'}).join("")+'</ul><div class="tags">'+p[3].map(function(x){return '<span class="tag">'+x+'</span>'}).join("")+'</div>'+(b?'<div class="cta" style="margin-top:18px">'+b+'</div>':'')+'</div>'}).join("");
+// why
+var wy=[["💸","Affordable pricing","Quality websites that fit small budgets."],["📱","Modern and responsive designs","Looks great on phones, tablets, and desktops."],["🧭","User-friendly interfaces","Clear layouts that visitors can use right away."],["✅","Quality-focused development","Clean, maintainable code."],["💬","Clear communication","You always know where your project stands."],["🛠️","Customized solutions","Built around your goals, not a template."]];
+$("whyGrid").innerHTML=wy.map(function(w){return '<div class="glass why lift"><i>'+w[0]+'</i><div><h3>'+w[1]+'</h3><p>'+w[2]+'</p></div></div>'}).join("");
+// nav
+var nv=$("nav"),bg=$("bg");
+bg.onclick=function(){var o=nv.classList.toggle("open");bg.setAttribute("aria-expanded",o)};
+nv.onclick=function(e){if(e.target.tagName=="A"){nv.classList.remove("open");bg.setAttribute("aria-expanded","false")}};
+$("yr").textContent=new Date().getFullYear();
+// placeholders for social links
+document.querySelectorAll("[data-ph]").forEach(function(a){a.onclick=function(e){e.preventDefault();alert("Add your "+a.dataset.ph+" link in the code to activate this button.")}});
+// quote buttons prefill subject
+var pre="";document.querySelectorAll("[data-sub]").forEach(function(a){a.addEventListener("click",function(){$("s").value=a.dataset.sub})});
+// form
+$("cf").onsubmit=function(ev){ev.preventDefault();
+var v={n:$("n").value.trim(),e:$("e").value.trim(),s:$("s").value.trim(),m:$("m").value.trim()},bad=0;
+var msg={n:v.n.length<2?"Enter your name.":"",e:/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.e)?"":"Enter a valid email address.",s:v.s.length<3?"Enter a subject.":"",m:v.m.length<10?"Message must be at least 10 characters.":""};
+for(var k in msg){$("e-"+k).textContent=msg[k];if(msg[k])bad=1}
+if(bad)return;
+var body="Name: "+v.n+"\nEmail: "+v.e+"\n\n"+v.m;
+location.href="mailto:abineshr491@gmail.com?subject="+encodeURIComponent(v.s)+"&body="+encodeURIComponent(body);
+$("ok").textContent="Your email app should open with the message ready to send. Prefer chat? Use the WhatsApp button.";
+};
+</script>
+</body>
+</html>
